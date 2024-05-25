@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://kit.fontawesome.com/00004d1a2d.js" crossorigin="anonymous"></script>
+    <script src="./index.js" type="application/javascript"></script>
+    <script src="./quotes.js"></script>
+    <script src="./lib/environment.js"></script>
+    <script src="./lib/libreria.js"></script>
+    <script src="./lib/sweetalert2.all.11.3.7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <title>Alpha Vantage | Home</title>
+</head>
+
+<body class="light">
+    <header>
+        <a class="headerButton" href="#globalQuote">GLOBAL QUOTES</a>
+        <a class="headerButton" href="#chartSection">DRAW GRAPH</a>
+        <button class="headerButton" id="dark-light" style="background-color: transparent;"> <i class="fa-solid fa-moon" style="font-size: 13pt; color: whitesmoke;"></i> </button>
+        <a href="#title" id="tornaSu" style="float: right; border-radius: 50%;"><b style="font-size: 12pt;">^</b></a>
+    </header>
+    <section id="title">
+        <h1>ALPHA VANTAGE</h1>
+        <h2> REAL TIME MARKET DATA </h2>
+    </section>
+    <section>
+        <div class="container">
+            <div class="section" id="sec1">
+                <h3 id="globalQuote">GLOBAL QUOTE</h3>
+                <span>Select a company: </span>
+                <br>
+                <select class="comboBox">
+                    <option name="IBM" value="IBM"> IBM </option>
+                    <option name="MICROSOFT" value="MSFT"> MICROSOFT </option>
+                    <option name="SONY" value="SNE"> SONY </option>
+                    <option name="ALIBABA" value="BABA"> ALIBABA </option>
+                    <option name="XIAOMI" value="XIACF"> XIAOMI </option>
+                </select>
+                <br>
+                <input type="button" id="btnSee" value="SEE LOCATION" hid="hid!!!!">
+                <br>
+                <div id="alert">Select a company first!</div>
+                <br><br><br>
+                <h3 id="searchQuote">SEARCH QUOTE</h3>
+                <span>Search a company: </span>
+                <br>
+                <input type="text" id="searchBox">
+                <span id="bestMatches" align="center"></span>
+            </div>
+            <div id="verticalBar"></div>
+
+            <div class="section" id="sec2">
+                <h3>QUOTE DETAILS</h3>
+                <span id="quoteDetails"> </span>
+                <div id="wrapper">
+                    <div id="quote">
+                        <div class="camp">Symbol <b class="bar">|</b> <span id="symbol"></span></div>
+                        <div class="camp">Last Trade <b class="bar">|</b> <span id="lastTrade"></span></div>
+                        <div class="camp">Last Trade Time <b class="bar">|</b> <span id="lastTradeTime"></span></div>
+                        <div class="camp">Change <b class="bar">|</b> <span id="change"></span></div>
+                        <div class="camp">Open <b class="bar">|</b> <span id="open"></span></div>
+                        <div class="camp">Previous Close <b class="bar">|</b> <span id="previousClose"></span></div>
+                        <div class="camp">Day's Low <b class="bar">|</b> <span id="daysLow"></span></div>
+                        <div class="camp">Day's High <b class="bar">|</b> <span id="daysHigh"></span></div>
+                        <div class="camp">Volume <b class="bar">|</b> <span id="volume"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="chartSection">
+        <div class="container">
+            <div class="section" id="divListBox">
+                <div id="sec1">
+                    <h3>SELECT A DATE</h3>
+                    <select class="comboBox comboDate">
+                    </select>
+                </div>
+            </div>
+            <div class="section" id="divGraph">
+                <h3></h3>
+                <canvas id="myChart" width="200" height="100"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <img src="img/ioNM.jpeg" alt="Logo" class="footer-logo">
+                <pSotto class="footer-description">
+                    <b>Alpha Vantage by Enrico Cordero</b>
+                    <br>
+                    GitHub: @<a href="https://github.com/enricordero" target="_blank">enricordero</a>
+                </pSotto>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
